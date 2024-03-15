@@ -1,0 +1,12 @@
+class Solution(object):
+    def searchInsert(self, nums, target):
+        lv,hv=0, len(nums)-1
+        while lv<=hv:
+            mv=(lv+hv)//2
+            if nums[mv]==target:
+                return mv
+            elif nums[mv]<target:
+                lv=mv+1
+            else:
+                hv=mv-1
+        return lv
