@@ -1,0 +1,8 @@
+class Solution(object):
+    def missingNumber(self, nums):
+        np=len(nums)
+        s1=int((np*(np+1))//2)
+        s2=0
+        for i in nums:
+            s2+=i
+        return (s1-s2)
