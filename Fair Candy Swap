@@ -1,0 +1,9 @@
+class Solution:
+    def fairCandySwap(self, aliceSizes: List[int], bobSizes: List[int]) -> List[int]:
+        t_alice=sum(aliceSizes)
+        t_bob=sum(bobSizes)
+        total=(t_alice+t_bob)//2
+        for acandy in aliceSizes:
+            bcandy=acandy+(total-t_alice)
+            if bcandy in bobSizes:
+                return [acandy,bcandy]      
